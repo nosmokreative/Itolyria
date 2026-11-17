@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="dia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="gerador" content="<!--@VERSAO-->">
+<title>Sistema D4 — Ficha de Personagem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Cinzel:wght@600;700&family=Crimson+Pro:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+/*@CSS*/
+</style>
+</head>
+<body>
+
+<!-- ══════════ CRIAÇÃO (E3) ══════════ -->
+<section id="tela-criacao" class="tela" aria-label="Criação de personagem">
+  <header class="topo">
+    <div class="topo-linha">
+      <button type="button" class="btn btn-texto oculto" id="cr-cancelar" data-cr="cancelar">Cancelar</button>
+      <div class="topo-titulo"><h1>Novo personagem</h1></div>
+      <button type="button" class="btn" data-cr="aleatorio">Gerar aleatório</button>
+      <button type="button" class="btn btn-icone btn-tema" data-acao="tema" aria-label="Alternar modo noite"></button>
+    </div>
+    <ol class="cr-etapas" id="cr-etapas" aria-label="Etapas"></ol>
+  </header>
+  <main class="tela-corpo cr-corpo" id="criacao-corpo"></main>
+  <footer class="cr-rodape" id="cr-rodape"></footer>
+  <p id="cr-anuncio" class="so-leitor" role="status" aria-live="polite"></p>
+</section>
+
+<!-- ══════════ FICHA (E2) ══════════ -->
+<section id="tela-ficha" class="tela" aria-label="Ficha do personagem">
+  <header class="topo">
+    <div class="topo-linha">
+      <div class="avatar" id="ficha-avatar" aria-hidden="true"></div>
+      <div class="topo-titulo"><h1 id="ficha-nome"></h1><span id="ficha-linha"></span></div>
+      <button type="button" class="btn" id="btn-personagens">Personagens</button>
+    </div>
+    <div class="fc-vital" id="ficha-vital"></div>
+  </header>
+  <main class="tela-corpo" id="ficha-corpo"></main>
+  <aside class="fc-lado" id="ficha-lado" aria-label="Habilidades, itens e notas">
+    <nav class="fc-lado-nav" id="ficha-lado-nav" aria-label="Abas ao lado"></nav>
+    <div class="fc-lado-corpo" id="ficha-lado-corpo"></div>
+  </aside>
+  <div class="fc-roll oculto" id="ficha-rolagem" role="status" aria-live="polite"></div>
+  <button type="button" class="btn-flutuante" id="btn-entrar-combate">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 15L13 5M10 4h4v4M5 11l2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Entrar em combate
+  </button>
+  <nav class="nav-inferior" aria-label="Seções da ficha" id="ficha-nav"></nav>
+</section>
+
+<!-- ══════════ COMBATE (E1) ══════════ -->
+<section id="tela-combate" class="tela" aria-label="Combate">
+  <header class="topo">
+    <div class="topo-linha">
+      <button type="button" class="btn" id="btn-sair-combate">Sair do combate</button>
+      <div class="topo-titulo" style="text-align:right"><h1 id="combate-turno" class="num"></h1><span id="combate-nome"></span></div>
+      <button type="button" class="btn btn-icone btn-tema" data-acao="tema" aria-label="Alternar modo noite"></button>
+    </div>
+  </header>
+  <main class="tela-corpo" id="combate-corpo"></main>
+  <footer class="rodape-acoes">
+    <button type="button" class="btn cb-desfazer" id="btn-desfazer" data-c="desfazer">Desfazer</button>
+    <button type="button" class="btn btn-cheio" data-c="encerrar">Encerrar turno</button>
+  </footer>
+</section>
+
+<div id="folhas"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="dado-pop" class="oculto" role="status" aria-live="polite"></div>
+
+<script>
+/*@JS*/
+</script>
+</body>
+</html>

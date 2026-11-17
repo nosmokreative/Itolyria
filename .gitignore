@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+fase11_src/testes/capturas/
+.obsidian/
+.DS_Store
+Thumbs.db
+desktop.ini
